@@ -1,0 +1,33 @@
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.AssemblyReference.cache
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.manifest
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.application
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe.manifest
+C:\Users\Dan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.application
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.manifest
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.application
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.AssemblyReference.cache
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe.manifest
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.application
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\Dandan\Documents\DHC Setter Software\WindowsApp1\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
