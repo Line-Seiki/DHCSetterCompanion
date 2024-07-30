@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\DHC Setter Companion Software.vbproj|c:\\users\\dandan\\documents\\dhc setter software\\final ver\\windowsapp1\\windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\DHC Setter Companion Software.vbproj|c:\\users\\dandan\\documents\\dhc setter software\\final ver\\windowsapp1\\windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\DHC Setter Companion Software.vbproj|solutionrelative:windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\DHC Setter Companion Software.vbproj|C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\DHC Setter Companion Software.vbproj|solutionrelative:windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -11,8 +15,7 @@
       "RelativeMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\DHC Setter Companion Software.vbproj|C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\DHC Setter Companion Software.vbproj|solutionrelative:windowsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DHC Setter Companion Software||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46806EBF-7E7D-463B-A2CE-36B5AECF3B73}|WindowsApp1\\WindowsApp1.vbproj|C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\windowsapp1\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -26,39 +29,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 250,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Form1.vb",
-              "ToolTip": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb",
-              "RelativeToolTip": "WindowsApp1\\Form1.vb",
-              "ViewState": "AQIAAOgAAAAAAAAAAAAIwO4AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-07-18T23:09:04.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Form1.vb",
-              "ToolTip": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb [Design]",
-              "RelativeToolTip": "WindowsApp1\\Form1.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-07-17T07:40:34.79Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -72,13 +51,49 @@
               "RelativeDocumentMoniker": "WindowsApp1\\Form1.vb",
               "ToolTip": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb",
               "RelativeToolTip": "WindowsApp1\\Form1.vb",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAqwIoAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-18T23:09:04.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DHC Setter Companion Software",
+              "DocumentMoniker": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\DHC Setter Companion Software.vbproj",
+              "RelativeDocumentMoniker": "WindowsApp1\\DHC Setter Companion Software.vbproj",
+              "ToolTip": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\DHC Setter Companion Software.vbproj",
+              "RelativeToolTip": "WindowsApp1\\DHC Setter Companion Software.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-29T06:26:39.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Form1.vb",
+              "ToolTip": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb [Design]",
+              "RelativeToolTip": "WindowsApp1\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-17T07:40:34.79Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Form1.vb",
+              "ToolTip": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.vb",
+              "RelativeToolTip": "WindowsApp1\\Form1.vb",
               "ViewState": "AgIAABQAAAAAAAAAAAAAABoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-07-17T07:40:34.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Dandan\\Documents\\DHC Setter Software\\Final Ver\\WindowsApp1\\WindowsApp1\\Form1.Designer.vb",
               "RelativeDocumentMoniker": "WindowsApp1\\Form1.Designer.vb",

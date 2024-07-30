@@ -50,6 +50,7 @@ Partial Class Form1
         Me.LowerTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.RevolutionTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.DistanceTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.numRevolution, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numDistance, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,9 +78,11 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.numUpper)
         Me.GroupBox1.Controls.Add(Me.numHeight)
         Me.GroupBox1.Controls.Add(Me.Height)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(225, 209)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(300, 257)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Parameters"
@@ -87,45 +90,50 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.Label5.Location = New System.Drawing.Point(17, 167)
+        Me.Label5.Location = New System.Drawing.Point(23, 206)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(101, 23)
+        Me.Label5.Size = New System.Drawing.Size(135, 28)
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Rotation"
         '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.Label4.Location = New System.Drawing.Point(17, 139)
+        Me.Label4.Location = New System.Drawing.Point(23, 171)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 23)
+        Me.Label4.Size = New System.Drawing.Size(135, 28)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Distance"
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.Label3.Location = New System.Drawing.Point(17, 111)
+        Me.Label3.Location = New System.Drawing.Point(23, 137)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 23)
+        Me.Label3.Size = New System.Drawing.Size(135, 28)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Revolution"
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.Label2.Location = New System.Drawing.Point(17, 82)
+        Me.Label2.Location = New System.Drawing.Point(23, 101)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 23)
+        Me.Label2.Size = New System.Drawing.Size(135, 28)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Lower Limit"
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.Label1.Location = New System.Drawing.Point(17, 53)
+        Me.Label1.Location = New System.Drawing.Point(23, 65)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 23)
+        Me.Label1.Size = New System.Drawing.Size(135, 28)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Upper Limit"
         '
@@ -133,56 +141,61 @@ Partial Class Form1
         '
         Me.cbRotation.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbRotation.FormattingEnabled = True
-        Me.cbRotation.Location = New System.Drawing.Point(124, 165)
+        Me.cbRotation.Location = New System.Drawing.Point(165, 203)
+        Me.cbRotation.Margin = New System.Windows.Forms.Padding(4)
         Me.cbRotation.Name = "cbRotation"
-        Me.cbRotation.Size = New System.Drawing.Size(82, 27)
-        Me.cbRotation.TabIndex = 11
+        Me.cbRotation.Size = New System.Drawing.Size(108, 31)
+        Me.cbRotation.TabIndex = 6
         '
         'numRevolution
         '
         Me.numRevolution.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numRevolution.Location = New System.Drawing.Point(124, 108)
+        Me.numRevolution.Location = New System.Drawing.Point(165, 133)
+        Me.numRevolution.Margin = New System.Windows.Forms.Padding(4)
         Me.numRevolution.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.numRevolution.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numRevolution.Name = "numRevolution"
-        Me.numRevolution.Size = New System.Drawing.Size(82, 26)
-        Me.numRevolution.TabIndex = 10
+        Me.numRevolution.Size = New System.Drawing.Size(109, 30)
+        Me.numRevolution.TabIndex = 4
         Me.numRevolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numRevolution.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'numDistance
         '
         Me.numDistance.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numDistance.Location = New System.Drawing.Point(124, 136)
+        Me.numDistance.Location = New System.Drawing.Point(165, 167)
+        Me.numDistance.Margin = New System.Windows.Forms.Padding(4)
         Me.numDistance.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numDistance.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numDistance.Name = "numDistance"
-        Me.numDistance.Size = New System.Drawing.Size(82, 26)
-        Me.numDistance.TabIndex = 9
+        Me.numDistance.Size = New System.Drawing.Size(109, 30)
+        Me.numDistance.TabIndex = 5
         Me.numDistance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numDistance.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'numLower
         '
         Me.numLower.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numLower.Location = New System.Drawing.Point(124, 79)
+        Me.numLower.Location = New System.Drawing.Point(165, 97)
+        Me.numLower.Margin = New System.Windows.Forms.Padding(4)
         Me.numLower.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numLower.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numLower.Name = "numLower"
-        Me.numLower.Size = New System.Drawing.Size(82, 26)
-        Me.numLower.TabIndex = 8
+        Me.numLower.Size = New System.Drawing.Size(109, 30)
+        Me.numLower.TabIndex = 3
         Me.numLower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numLower.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'numUpper
         '
         Me.numUpper.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.numUpper.Location = New System.Drawing.Point(124, 50)
+        Me.numUpper.Location = New System.Drawing.Point(165, 62)
+        Me.numUpper.Margin = New System.Windows.Forms.Padding(4)
         Me.numUpper.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numUpper.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numUpper.Name = "numUpper"
-        Me.numUpper.Size = New System.Drawing.Size(82, 26)
-        Me.numUpper.TabIndex = 7
+        Me.numUpper.Size = New System.Drawing.Size(109, 30)
+        Me.numUpper.TabIndex = 2
         Me.numUpper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numUpper.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -190,21 +203,23 @@ Partial Class Form1
         '
         Me.numHeight.DecimalPlaces = 2
         Me.numHeight.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numHeight.Location = New System.Drawing.Point(124, 22)
+        Me.numHeight.Location = New System.Drawing.Point(165, 27)
+        Me.numHeight.Margin = New System.Windows.Forms.Padding(4)
         Me.numHeight.Maximum = New Decimal(New Integer() {99999, 0, 0, 131072})
         Me.numHeight.Minimum = New Decimal(New Integer() {1, 0, 0, 131072})
         Me.numHeight.Name = "numHeight"
-        Me.numHeight.Size = New System.Drawing.Size(82, 26)
-        Me.numHeight.TabIndex = 6
+        Me.numHeight.Size = New System.Drawing.Size(109, 30)
+        Me.numHeight.TabIndex = 1
         Me.numHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numHeight.Value = New Decimal(New Integer() {1, 0, 0, 131072})
         '
         'Height
         '
         Me.Height.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.Height.Location = New System.Drawing.Point(17, 25)
+        Me.Height.Location = New System.Drawing.Point(23, 31)
+        Me.Height.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Height.Name = "Height"
-        Me.Height.Size = New System.Drawing.Size(101, 23)
+        Me.Height.Size = New System.Drawing.Size(135, 28)
         Me.Height.TabIndex = 0
         Me.Height.Text = "Current Height"
         '
@@ -212,9 +227,11 @@ Partial Class Form1
         '
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.cbPort)
-        Me.GroupBox2.Location = New System.Drawing.Point(252, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(336, 15)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(200, 66)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(267, 81)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Connection"
@@ -222,9 +239,10 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.Label6.Location = New System.Drawing.Point(17, 22)
+        Me.Label6.Location = New System.Drawing.Point(23, 27)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(44, 23)
+        Me.Label6.Size = New System.Drawing.Size(59, 28)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Port"
         '
@@ -232,18 +250,21 @@ Partial Class Form1
         '
         Me.cbPort.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbPort.FormattingEnabled = True
-        Me.cbPort.Location = New System.Drawing.Point(91, 19)
+        Me.cbPort.Location = New System.Drawing.Point(121, 23)
+        Me.cbPort.Margin = New System.Windows.Forms.Padding(4)
         Me.cbPort.Name = "cbPort"
-        Me.cbPort.Size = New System.Drawing.Size(87, 27)
-        Me.cbPort.TabIndex = 12
+        Me.cbPort.Size = New System.Drawing.Size(115, 31)
+        Me.cbPort.TabIndex = 7
         '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.lblStatus)
         Me.GroupBox3.Controls.Add(Me.btnSend)
-        Me.GroupBox3.Location = New System.Drawing.Point(252, 84)
+        Me.GroupBox3.Location = New System.Drawing.Point(336, 103)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(200, 137)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Size = New System.Drawing.Size(267, 169)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Send"
@@ -252,17 +273,19 @@ Partial Class Form1
         '
         Me.lblStatus.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(18, 87)
+        Me.lblStatus.Location = New System.Drawing.Point(24, 107)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(160, 26)
+        Me.lblStatus.Size = New System.Drawing.Size(213, 32)
         Me.lblStatus.TabIndex = 1
         '
         'btnSend
         '
         Me.btnSend.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSend.Location = New System.Drawing.Point(18, 17)
+        Me.btnSend.Location = New System.Drawing.Point(24, 21)
+        Me.btnSend.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSend.Name = "btnSend"
-        Me.btnSend.Size = New System.Drawing.Size(160, 67)
+        Me.btnSend.Size = New System.Drawing.Size(213, 82)
         Me.btnSend.TabIndex = 0
         Me.btnSend.Text = "SEND"
         Me.btnSend.UseVisualStyleBackColor = True
@@ -270,15 +293,27 @@ Partial Class Form1
         'Timer1
         '
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(430, 276)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(173, 19)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Line Seiki 2024 Version 1.5"
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(487, 247)
+        Me.ClientSize = New System.Drawing.Size(649, 304)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
@@ -294,6 +329,7 @@ Partial Class Form1
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -324,4 +360,5 @@ Partial Class Form1
     Friend WithEvents LowerTip As ToolTip
     Friend WithEvents RevolutionTip As ToolTip
     Friend WithEvents DistanceTip As ToolTip
+    Friend WithEvents Label7 As Label
 End Class

@@ -6,7 +6,7 @@ Public Class Form1
     Private receiveString As String = ""
     Private watcher As ManagementEventWatcher
     Private portIsOpen As Boolean = False
-
+    Private noPortsMessageShown As Boolean = False
     Private Sub ValidateLimits()
 
         If numUpper.Value < numLower.Value Then
@@ -61,15 +61,15 @@ Public Class Form1
 
 
         SetEnableInputs(True)
-        numHeight.Value = 777.77
+        numHeight.Value = 888.88
         numUpper.Value = 888
-        numLower.Value = 777
-        numRevolution.Value = 20
-        numDistance.Value = 2
+        numLower.Value = 888
+        numRevolution.Value = 10
+        numDistance.Value = 1
         'Initialize the cbRotation
         cbRotation.Items.Add("Left")
         cbRotation.Items.Add("Right")
-        cbRotation.SelectedIndex = 0
+        cbRotation.SelectedIndex = 1
 
         ' Set up the USB device arrival and removal event watcher
         Dim query As New WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2 OR EventType = 3")
@@ -89,8 +89,8 @@ Public Class Form1
                           lblStatus.Text = "USB Device Plugged In"
                           Timer1.Interval = 2000
                           Timer1.Start()
+                          noPortsMessageShown = False ' Reset the flag
                           InitializeCOMPorts()
-
                       End Sub)
         ElseIf eventType = 3 Then
             ' Device unplugged
@@ -99,12 +99,8 @@ Public Class Form1
                           Timer1.Interval = 2000
                           Timer1.Start()
                           InitializeCOMPorts()
-
                       End Sub)
         End If
-
-        ' Set the flag to indicate that the COM port list needs to be updated
-
     End Sub
 
 
@@ -132,12 +128,13 @@ Public Class Form1
         ' Preselect the first port if available
         If cbPort.Items.Count > 0 Then
             cbPort.SelectedIndex = 0
-
+            noPortsMessageShown = False
         Else
-            ' No ports available, prompt the user
-            MessageBox.Show("No ports are available. Please connect a device", "Error")
-            cbPort.Text = "" ' Clear any previous selection
-            ' Disable the ComboBox
+            If Not noPortsMessageShown Then
+                MessageBox.Show("No ports are available. Please connect a device", "Error")
+                noPortsMessageShown = True
+            End If
+            cbPort.Text = ""
         End If
     End Sub
 
@@ -157,7 +154,7 @@ Public Class Form1
         Dim receivedData As String = serialPort.ReadLine() ' Read a line of data
         ' Process the receivedData, update UI, etc.
     End Sub
-    Private Sub CheckInputValidity()
+    Private Function CheckInputValidity() As Boolean
         ' Check the validity of all input fields
         Dim validInput As Boolean = True
 
@@ -171,12 +168,12 @@ Public Class Form1
             validInput = False
         End If
 
+        ' Check if numUpper is not less than numLower
         If numUpper.Value < numLower.Value Then
             ShowToolTip(UpTip, numUpper, "Upper Limit cannot be lower than Lower Limit")
             validInput = False
         Else
             UpTip.Hide(numUpper)
-            validInput = True
         End If
 
         ' Check if numLower is valid
@@ -196,19 +193,20 @@ Public Class Form1
 
         ' Check if any input field is empty or null
         If String.IsNullOrWhiteSpace(numHeight.Text) OrElse
-        String.IsNullOrWhiteSpace(numUpper.Text) OrElse
-        String.IsNullOrWhiteSpace(numLower.Text) OrElse
-        String.IsNullOrWhiteSpace(numRevolution.Text) OrElse
-        String.IsNullOrWhiteSpace(numDistance.Text) Then
+       String.IsNullOrWhiteSpace(numUpper.Text) OrElse
+       String.IsNullOrWhiteSpace(numLower.Text) OrElse
+       String.IsNullOrWhiteSpace(numRevolution.Text) OrElse
+       String.IsNullOrWhiteSpace(numDistance.Text) Then
             validInput = False
         End If
 
-        ' Update the status label text if any input field is empty or null
-
-
         ' Enable or disable the Send button based on input validity
         btnSend.Enabled = validInput
-    End Sub
+
+        ' Return the validity status
+        Return validInput
+    End Function
+
 
     Private Sub ShowToolTip(toolTip As ToolTip, control As Control, message As String)
         ' Calculate the new X-coordinate by adding an offset (e.g., 10 pixels)
@@ -258,74 +256,84 @@ Public Class Form1
         End While
     End Sub
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        Try
-            SerialPort1.PortName = cbPort.SelectedItem.ToString()
-            SerialPort1.Open() ' Open the serial port
-            SerialPort1.DiscardInBuffer()
-            SerialPort1.DiscardOutBuffer()
-            portIsOpen = True
-        Catch ex As Exception
-            portIsOpen = False
-        End Try
+        ' Dandan 07/30/2024 - Add validation in Send Button
+        If CheckInputValidity() Then
+            Try
+                If cbPort.SelectedItem IsNot Nothing Then
+                    SerialPort1.PortName = cbPort.SelectedItem.ToString()
+                    SerialPort1.Open() ' Open the serial port
+                    SerialPort1.DiscardInBuffer()
+                    SerialPort1.DiscardOutBuffer()
+                    portIsOpen = True
+                Else
 
-        Dim transmitString As String
-        Dim numCurrentHeightForSending As Integer = numHeight.Value * 100
-        Dim cbRotationForSending As String
-        Dim checksumForSending As Integer
+                    portIsOpen = False
+                End If
+            Catch ex As Exception
+                portIsOpen = False
+            End Try
 
-        If cbRotation.SelectedItem = "Right" Then
-            cbRotationForSending = "R"
-        Else
-            cbRotationForSending = "L"
-        End If
-        checksumForSending = getChecksumAsciiBytes(numCurrentHeightForSending) +
-            getChecksumAsciiBytes(numUpper.Value) +
-            getChecksumAsciiBytes(numLower.Value) +
-            getChecksumAsciiBytes(numRevolution.Value) +
-            getChecksumAsciiBytes(numDistance.Value) +
-            getChecksumAsciiBytesString(cbRotationForSending)
+            Dim transmitString As String
+            Dim numCurrentHeightForSending As Integer = numHeight.Value * 100
+            Dim cbRotationForSending As String
+            Dim checksumForSending As Integer
 
-        transmitString =
-            "<" &
-            numCurrentHeightForSending & "," &
-            numUpper.Value & "," &
-            numLower.Value & "," &
-            numRevolution.Value & "," &
-            numDistance.Value & "," &
-            cbRotationForSending & "," &
-            "0x" & Convert.ToString(checksumForSending, 16) &
-            ">"
-
-        Try
-            ' Replace with actual data
-            SerialPort1.Write(transmitString)
-            lblStatus.Text = "Sending.."
-            SetEnableInputs(False)
-            ' Wait for acknowledgment with a timeout of 5000 milliseconds (5 seconds)
-            WaitForAcknowledgment(1000)
-            ' Handle acknowledgment (e.g., update status label)
-            If acknowledgmentReceived Then
-                lblStatus.Text = "Send successful."
-
+            If cbRotation.SelectedItem = "Right" Then
+                cbRotationForSending = "R"
             Else
-                lblStatus.Text = "Device Error. Timeout."
-
+                cbRotationForSending = "L"
             End If
-        Catch ex As Exception
-            ' Handle write error
-            MessageBox.Show("Error while sending data: " & "Device is not available. Please connect-disconnect your device", "Send Error")
+            checksumForSending = getChecksumAsciiBytes(numCurrentHeightForSending) +
+                getChecksumAsciiBytes(numUpper.Value) +
+                getChecksumAsciiBytes(numLower.Value) +
+                getChecksumAsciiBytes(numRevolution.Value) +
+                getChecksumAsciiBytes(numDistance.Value) +
+                getChecksumAsciiBytesString(cbRotationForSending)
 
-        End Try
-        Timer1.Interval = 3000
-        Timer1.Start()
+            transmitString =
+                "<" &
+                numCurrentHeightForSending & "," &
+                numUpper.Value & "," &
+                numLower.Value & "," &
+                numRevolution.Value & "," &
+                numDistance.Value & "," &
+                cbRotationForSending & "," &
+                "0x" & Convert.ToString(checksumForSending, 16) &
+                ">"
+
+            Try
+                ' Replace with actual data
+                SerialPort1.Write(transmitString)
+                lblStatus.Text = "Sending.."
+                SetEnableInputs(False)
+                ' Wait for acknowledgment with a timeout of 5000 milliseconds (5 seconds)
+                WaitForAcknowledgment(1000)
+                ' Handle acknowledgment (e.g., update status label)
+                If acknowledgmentReceived Then
+                    lblStatus.Text = "Send successful."
+
+                Else
+                    lblStatus.Text = "Device Error. Timeout."
+
+                End If
+            Catch ex As Exception
+                ' Handle write error
+                MessageBox.Show("Error while sending data: " & "Device is not available. Please connect-disconnect your device", "Send Error")
+
+            End Try
+            Timer1.Interval = 3000
+            Timer1.Start()
 
 
-        If SerialPort1.IsOpen Then
-            SerialPort1.DiscardInBuffer()
-            SerialPort1.DiscardOutBuffer()
-            SerialPort1.Close()
+            If SerialPort1.IsOpen Then
+                SerialPort1.DiscardInBuffer()
+                SerialPort1.DiscardOutBuffer()
+                SerialPort1.Close()
+            End If
+        Else
+            MessageBox.Show("One or more inputs are invalid. Please review the fields and correct any errors", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         End If
-
     End Sub
 
     Private Sub SerialPort1_DataReceived(sender As Object, e As SerialDataReceivedEventArgs) Handles SerialPort1.DataReceived
@@ -454,6 +462,10 @@ Public Class Form1
             DistanceTip.Hide(numControl)
             btnSend.Enabled = True
         End If
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
     End Sub
 End Class
